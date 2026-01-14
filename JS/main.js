@@ -1,4 +1,4 @@
-const URL = "http://localhost:2000";
+const URL = "http://formulario-ii.up.railway.app";
 const form = document.querySelector("form");
 const steps = document.querySelectorAll(".form-step");
 const progressBar = document.getElementById("progressBar");
