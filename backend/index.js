@@ -5,8 +5,20 @@ import routes from "./src/routes/routes.js";
 
 const app = express(); 
 
+const allowedOrigins = [
+  "http://127.0.0.1:5500", 
+  "https://formulario-ii.onrender.com",
+  "https://formulario-ii-estudiantes.onrender.com" 
+];
+
 app.use(cors({
-  origin: "http://127.0.0.1:5500"
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('No permitido por CORS'));
+    }
+  }
 }));
 
 app.use(express.json());
