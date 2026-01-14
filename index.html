@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario IID - Docentes</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    table input[type="number"] {
+      width: 80px;
+      text-align: center;
+    }
+
+    .section-card {
+      margin-bottom: 10px;
+    }
+
+    form .form-step { display: none; }
+form .form-step.active { display: block; }
+
+  </style>
+</head>
+
+<body>
+
+<header class="mb-4">
+  <h1 class="text-center">Formulario de Investigación Docente</h1>
+  <p class="text-center">
+    Formulario para el cálculo del Índice de Investigación Docente (IID).<br>
+    Las respuestas deben diligenciarse separadamente para los años 2024 y 2025.
+  </p>
+</header>
+
+<div class="container mb-4">
+  <div class="progress">
+    <div
+      id="progressBar"
+      class="progress-bar progress-bar-striped progress-bar-animated"
+      role="progressbar"
+      style="width: 0%">
+    </div>
+  </div>
+</div>
+
+<main class="container">
+
+<form name="form">
+
+<!-- ================= DATOS DEL DOCENTE ================= -->
+
+<div class="form-step active">
+<section class="card section-card">
+  <div class="card-body">
+    <h5 class="card-title mb-3">Datos del docente</h5>
+
+    <div class="mb-3">
+      <label class="form-label">Nombre completo</label>
+      <input type="text" class="form-control" name="nombre"required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Correo institucional</label>
+      <input type="email" class="form-control" name="correo" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Tipo de vinculación</label>
+      <select class="form-select"  name="vinculacion" required>
+        <option value="Planta">Planta</option>
+        <option value="Catedra">Cátedra</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary btn-next">
+      Siguiente
+    </button>
+  </div>
+
+</div>
+
+ <!--TABLA 2://///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+ <div class="form-step active">
+<section class="section-card">
+  <h4>¿Cuántos productos de Nuevo Conocimiento publicó o le fueron aceptados en 2024 y 2025?</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-mnamedle">
+    <thead>
+        <tr>
+          <th>Producto</th>
+          <th>2024</th>
+          <th>2025</th>
+        </tr>
+      </thead>
+   <tbody>
+  <td>¿Cuántos Artículo en revista A1 publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_A1_2024" min="0"></td>
+  <td><input type="number" name="PNC_A1_2025" min="0"></td>
+</tr>
+<tr>
+  <td>¿Cuántos Artículos en revista A2 publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_A2_2024" min="0"></td>
+  <td><input type="number" name="PNC_A2_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Artículos en revista B publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_B_2024" min="0"></td>
+  <td><input type="number" name="PNC_B_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Artículos en revista C publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_C_2024" min="0"></td>
+  <td><input type="number" name="PNC_C_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Artículos en revista no indexada publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_NI_2024" min="0"></td>
+  <td><input type="number" name="PNC_NI_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Libros resultado de investigación publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_LI_2024" min="0"></td>
+  <td><input type="number" name="PNC_LI_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Capítulos de libro de investigación publicó o le fueron aceptados en 2024 y 2025?</td>
+  <td><input type="number" name="PNC_CI_2024" min="0"></td>
+  <td><input type="number" name="PNC_CI_2025" min="0"></td>
+</tr>
+    </tbody>
+    </table>
+  </div>
+</section>
+
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary btn-prev">
+      Anterior
+    </button>
+    <button type="button" class="btn btn-primary btn-next">
+      Siguiente
+    </button>
+  </div>
+
+</div>
+
+<!--TABLA 3://///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<div class="form-step active">
+
+<section class="section-card">
+  <h4>¿Cuántos productos de Desarrollo Tecnológico e Innovación realizó o en cuántos participó en 2024 y 2025?  </h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-mnamedle">
+    <thead>
+        <tr>
+          <th>Producto</th>
+          <th>2024</th>
+          <th>2025</th>
+        </tr>
+      </thead>
+
+ <tbody>
+  <tr>
+  <td>¿Cuántas Patentes de invención concedida realizó o en cuántos participó en 2024 y 2025?</td>
+   <td><input type="number" name="PDTI_PIC_2024" min="0"></td>
+  <td><input type="number" name="PDTI_PIC_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Patentes de invención en tramite realizó o en cuántos participó en 2024 y 2025?</td>
+  <td><input type="number" name="PDTI_PIT_2024" min="0"></td>
+  <td><input type="number" name="PDTI_PIT_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Patentes de modelo de utilidad concedida realizó o en cuántos participó en 2024 y 2025?</td>
+  <td><input type="number" name="PDTI_PUC_2024" min="0"></td>
+  <td><input type="number" name="PDTI_PUC_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Patentes de modelo de utilidad en tramite realizó o en cuántos participó en 2024 y 2025?</td>
+  <td><input type="number" name="PDTI_PMUT_2024" min="0"></td>
+  <td><input type="number" name="PDTI_PMUT_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Prototipos con certificado de validación realizó o en cuántos participó en 2024 y 2025?</td>
+  <td><input type="number" name="PDTI_PCCV_2024" min="0"></td>
+  <td><input type="number" name="PDTI_PCV_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Prototipos sin certificado de validación realizó o en cuántos participó en 2024 y 2025?</td>
+  <td><input type="number" name="PDTI_PSCV_2024" min="0"></td>
+  <td><input type="number" name="PDTI_PSCV_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Softwares con registro</td>
+  <td><input type="number" name="PDTI_SCR_2024" min="0"></td>
+  <td><input type="number" name="PDTI_SCR_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Softwares sin registro (OSS con repositorio/DOI/versionado) realizó o en cuántos participó en 2024 y 2025? </td>
+  <td><input type="number" name="PDTI_SSR_2024" min="0"></td>
+  <td><input type="number" name="PDTI_SSR_2025" min="0"></td>
+</tr>
+   </tbody>
+    </table>
+  </div>
+</section>
+
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary btn-prev">
+      Anterior
+    </button>
+    <button type="button" class="btn btn-primary btn-next">
+      Siguiente
+    </button>
+  </div>
+
+</div>
+
+<!--TABLA 4://///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<div class="form-step">
+<section class="section-card">
+  <h4>¿Cuántas veces realizó o participó en las siguientes actividades de Formación de Recurso Humano para la Investigación con énfasis en 
+Formación en Investigación en 2024 y 2025?</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-mnamedle">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>2024</th>
+          <th>2025</th>
+        </tr>
+      </thead>
+      <tbody>
+   <tr>
+  <td>¿Cuántas veces participó en grupos de investigación como director durante más de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PGIDMAS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PGIDMAS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en grupos de investigación como director durante menos de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PGIDMENOS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PGIDMENOS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en grupos de investigación como integrante durante más de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PGIIMAS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PGIIMAS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en grupos de investigación como integrante durante menos de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PGIIMENOS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PGIIMENOS1_2025" min="0"></td>
+</tr>
+
+<tr>
+<td>¿Cuántas veces participó en semilleros de investigación como mentor/líder durante más de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PSIMMAS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PSIMMAS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en semilleros de investigación como mentor/líder durante menos de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PSIMMENOS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PSIMMENOS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en semilleros de investigación como integrante durante más de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PSIIMAS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PSIIMAS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en semilleros de investigación como integrante durante menos de 1 año en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PSIIMENOS1_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PSIIMENOS1_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en capacitaciones internacionales en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PCI_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PCI_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en capacitaciones nacionales en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PCN_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PCN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en capacitaciones institucionales en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PCAPIN_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PCAPIN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en competencias internacionales en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PCOMPINT_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PCOMPINT_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en competencias nacionales en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PCOMN_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PCOMN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en competencias institucionales en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PCOMINS_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PCOMINS_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó en estancias cortas (movilnamead académica) en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_PEC_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_PEC_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuánto Desarrollo de material que contribuye a la Formación en Investigación realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIFI_DMCFI_2024" min="0"></td>
+  <td><input type="number" name="FRHIFI_DMCFI_2025" min="0"></td>
+</tr>
+</tbody>
+    </table>
+  </div>
+</section>
+
+ <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary btn-prev">
+      Anterior
+    </button>
+    <button type="button" class="btn btn-primary btn-next">
+      Siguiente
+    </button>
+  </div>
+
+</div>
+
+<!--TABLA 5://///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<div class="form-step">
+<section class="section-card">
+  <h4>¿Cuántas veces realizó o participó en las siguientes actividades de Formación de Recurso Humano para la Investigación con énfasis en 
+Investigación Formativa en 2024 y 2025?</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-mnamedle">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>2024</th>
+          <th>2025</th>
+        </tr>
+      </thead>
+      <tbody>
+   <tr>
+  <td>¿Cuántas veces participó como investigador principal o coinvestigador en un proyecto de 
+investigación internacional en 2024 y 2025?</td>
+ <td><input type="number" name="FRHIIF_PIPCPII_2024" min="0"></td>
+ <td><input type="number" name="FRHIIF_PIPCPII_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó como investigador en un proyecto de investigación internacional en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PIPII_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PIPII_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó como investigador principal o coinvestigador en un proyecto de 
+investigación nacional en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PIPCPIN_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PIPCPIN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó como investigador en un proyecto de investigación nacional en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PIPIN_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PIPIN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó como investigador principal en un proyecto de investigación de la UDFJC 
+institucionalizado con financiación  en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PIPUDFJC_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PIPUDFJC_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó como coinvestigador en un proyecto de investigación de la UDFJC institucionalizado con financiación en 2024 y 2025?</td>
+    <td><input type="number" name="FRHIIF_PIPCUDFJC_2024" min="0"></td>
+    <td><input type="number" name="FRHIIF_PIPCUDFJC_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas veces participó como investigador principal en un proyecto de investigación de la UDFJC 
+institucionalizado con financiación en especie en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PIPUDFJCES_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PIPUDFJCES_2025" min="0"></td>
+</tr>
+
+<tr>
+    <td>¿Cuántas veces participó como coinvestigador en un proyecto de investigación de la UDFJC institucionalizado con financiación en especie en 2024 y 2025?</td>
+    <td><input type="number" name="FRHIIF_PIPCUDFJCES_2024" min="0"></td>
+    <td><input type="number" name="FRHIIF_PIPCUDFJCES_2025" min="0"></td>
+  </tr>
+
+<tr>
+  <td>¿Cuántas veces participó en un proyecto de investigación de la UDFJC no institucionalizado en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PPIUDFJNOIN_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PPIUDFJNOIN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas direcciones de trabajo de grado de doctorado con distinción realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_DTGDD_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_DTGDD_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas direcciones de trabajo de grado de doctorado sin distinción realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_DTGDSIND_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_DTGDSIND_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas direcciones de trabajo de grado de maestría con distinción meritoria o laureada realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_DTGMDML_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_DTGMDML_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas direcciones de trabajo de grado de maestría sin distinción realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_DTGMSIND_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_DTGMSIND_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas direcciones de trabajo de grado de pregrado con distinción meritoria o laureada realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_DTGPDML_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_DTGPDML_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas direcciones de trabajo de grado de pregrado sin distinción realizó en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_DTGPSIND_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_DTGPSIND_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Premios y reconocimientos internacionales obtuvo en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PRI_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PRI_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Premios y reconocimientos nacionales obtuvo en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PRN_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PRN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántos Premios y reconocimientos institucionales obtuvo en 2024 y 2025?</td>
+  <td><input type="number" name="FRHIIF_PRINS_2024" min="0"></td>
+  <td><input type="number" name="FRHIIF_PRINS_2025" min="0"></td>
+</tr>
+</tbody>
+    </table>
+  </div>
+</section>
+
+ <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary btn-prev">
+      Anterior
+    </button>
+    <button type="button" class="btn btn-primary btn-next">
+      Siguiente
+    </button>
+  </div>
+
+</div>
+<!--TABLA 6://///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<div class="form-step">
+<section class="section-card">
+  <h4>¿Cuántas de las siguientes actividades de Divulgación y Circulación del Conocimiento realizó o en cuántas participó en 2024 y 2025?</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-mnamedle">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>2024</th>
+          <th>2025</th>
+        </tr>
+      </thead>
+      <tbody>
+   <tr>
+  <td>¿Cuántas Ponencias en eventos académicos internacionales realizó o en cuántas participó en 2024 y 2025?</td>
+  <td><input type="number" name="DCC_PEAI_2024" min="0"></td>
+  <td><input type="number" name="DCC_PEAI_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Ponencias en eventos académicos nacionales realizó o en cuántas participó en 2024 y 2025?</td>
+  <td><input type="number" name="DCC_PEAN_2024" min="0"></td>
+  <td><input type="number" name="DCC_PEAN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Ponencias en eventos académicos institucionales realizó o en cuántas participó en 2024 y 2025?</td>
+  <td><input type="number" name="DCC_PEAINS_2024" min="0"></td>
+  <td><input type="number" name="DCC_PEAINS_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Organizaciones de eventos académico internacionales realizó o en cuántas participó en 2024 y 2025?</td>
+  <td><input type="number" name="DCC_OEAI_2024" min="0"></td>
+  <td><input type="number" name="DCC_OEAI_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Organizaciones de evento académico nacionales realizó o en cuántas participó en 2024 y 2025?</td>
+  <td><input type="number" name="DCC_OEAN_2024" min="0"></td>
+  <td><input type="number" name="DCC_OEAN_2025" min="0"></td>
+</tr>
+
+<tr>
+  <td>¿Cuántas Organizaciones de evento académico institucionales realizó o en cuántas participó en 2024 y 2025?</td>
+  <td><input type="number" name="DCC_OEAINS_2024" min="0"></td>
+  <td><input type="number" name="DCC_OEAINS_2025" min="0"></td>
+</tr>
+    </tbody>
+    </table>
+  </div>
+</section>
+
+ <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary btn-prev">
+      Anterior
+    </button>
+    <button type="submit" class="btn btn-success">
+      Enviar
+    </button>
+  </div>
+
+</div>
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+<script src="./JS/main.js"></script>
+</body>
+</html>
