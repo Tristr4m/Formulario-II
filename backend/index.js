@@ -25,7 +25,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/usuarios", routes);
 
-const port = process.env.PORT || 2000;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
 });

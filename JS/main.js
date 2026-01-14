@@ -1,4 +1,4 @@
-const URL = "https://postgres-production-3f100.up.railway.app";
+const URL = "formulario-ii.up.railway.app";
 const form = document.querySelector("form");
 const steps = document.querySelectorAll(".form-step");
 const progressBar = document.getElementById("progressBar");
@@ -100,7 +100,7 @@ form.addEventListener("submit", async (e) => {
     }
   } catch (error) {
     console.error("Error al enviar:", error);
-    alert("No se pudo conectar con el servidor. Asegúrate de que el backend esté corriendo en el puerto 2000.");
+    alert("No se pudo conectar con el servidor.");
   }
 });
 
