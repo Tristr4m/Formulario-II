@@ -10,7 +10,7 @@ const allowedOrigins = [
   "https://formulario-ii.onrender.com",
   "https://formulario-ii-estudiantes.onrender.com" 
 ];
-
+/*
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -20,11 +20,12 @@ app.use(cors({
     }
   }
 }));
-
+*/
+app.use(cors());
 app.use(express.json());
 app.use("/usuarios", routes);
 
-app.listen(2000, () => {
-    console.log("Servidor corriendo en el puerto 2000");
+const port = process.env.PORT || 2000;
+app.listen(port, () => {
+    console.log(`Servidor corriendo en el puerto ${port}`);
 });
-
