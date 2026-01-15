@@ -1,4 +1,4 @@
-const URL = "https://formulario-ii.up.railway.app";
+const URL = "https://formulario-ii-backend.onrender.com";
 const form = document.querySelector("form");
 const steps = document.querySelectorAll(".form-step");
 const progressBar = document.getElementById("progressBar");
