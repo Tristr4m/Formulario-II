@@ -74,7 +74,7 @@ form.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   // 3. Selección de RUTA (Si existe 'Ciclo' es el formulario de estudiantes IIE)
-  const endpoint = data.Ciclo ? "/usuarios/usuario-iie" : "/usuarios/usuario";
+  const endpoint = data.ciclo ? "/usuarios/usuario-iie" : "/usuarios/usuario";
 
   try {
     const response = await fetch(`${URL}${endpoint}`, {
