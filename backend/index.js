@@ -22,6 +22,7 @@ app.use(cors({
 
 app.use(express.json());
 app.use("/usuarios", routes);
+app.get("/", (req, res) => res.send("Backend Online")); 
 
 process.on("unhandledRejection", err => {
   console.error("Unhandled Rejection:", err);
@@ -33,6 +34,6 @@ process.on("uncaughtException", err => {
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
