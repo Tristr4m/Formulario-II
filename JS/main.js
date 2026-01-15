@@ -108,3 +108,21 @@ form.addEventListener("submit", async (e) => {
 
 showStep(currentStep);
 if(progressBar) updateProgress();
+
+/* ================= PREVENIR ENVÍO CON ENTER ================= */
+document.addEventListener("keydown", (e) => {
+  // Verificamos si la tecla presionada es ENTER
+  if (e.key === "Enter") {
+    // Evitamos que el formulario se envíe
+    e.preventDefault();
+    
+    // (Opcional) Si quieres que Enter funcione como el botón "Siguiente":
+    
+    const currentStepDiv = document.querySelector(".form-step.active");
+    const nextBtn = currentStepDiv ? currentStepDiv.querySelector(".btn-next") : null;
+    if (nextBtn) {
+      nextBtn.click();
+    }
+    
+  }
+});
